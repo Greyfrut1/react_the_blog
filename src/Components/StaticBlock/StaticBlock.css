@@ -1,0 +1,119 @@
+/* Base styles */
+.static_block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12px;
+  background-color: rgb(18 18 18 / 1);
+}
+.static_block__container1 {
+  width: 100%;
+  padding: 30px 10px 20px 10px;
+}
+.static_block__title {
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(255 255 255 / 1);
+  line-height: 40px;
+  margin-bottom: 25px;
+}
+.static_block__body {
+  color: rgb(255 255 255 / 0.5);
+  font-size: 18px;
+}
+.static_block__link {
+  color: rgb(255 255 255 / 1);
+  display: block;
+  margin: 50px auto 50px auto;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 340px;
+  border: 1px solid #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.static_block__link:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.static_block__container2 {
+  width: 100%;
+}
+.static_block__img {
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Media */
+
+/* Medium */
+
+@media (min-width: 768px) {
+  .static_block {
+    padding-top: 50px;
+  }
+  .static_block__container1 {
+    width: 50%;
+    padding: 0 30px 20px 10px;
+  }
+  .static_block__title {
+    margin-bottom: 50px;
+  }
+  .static_block__link {
+    margin: 50px 0 0 0;
+  }
+  .static_block__container2 {
+    width: 50%;
+  }
+  .static_block__img {
+    width: 600px;
+    height: auto;
+  }
+}
+
+/* Large */
+@media (min-width: 1024px) {
+  .static_block {
+    padding: 50px 60px 0;
+  }
+  .static_block__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .static_block__body {
+    font-size: 25px;
+  }
+}
+
+/* Extra Large */
+@media (min-width: 1280px) {
+  .static_block__title {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+/* Static 2 styles */
+.static_2_block {
+  background-color: #ffd335;
+}
+.static_2_block__title {
+  color: rgb(0 0 0 / 1);
+}
+.static_2_block__body {
+  color: rgb(0 0 0 / 1);
+}
+.static_2_block__link {
+  border-color: #000000;
+  color: #000000;
+}
+.static_2_block__link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

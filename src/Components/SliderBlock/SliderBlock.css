@@ -1,0 +1,121 @@
+/* Base styles */
+.slider_block__title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: rgb(18 18 18 / 0.3);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.slider_block__card {
+  width: 50%;
+  height: auto;
+  border-left: 1px solid #e5e5e5;
+}
+.slider_block__card_inside {
+  display: block;
+  padding: 0 12px;
+}
+.slider_block__card__img {
+  object-fit: cover;
+  object-position: center;
+  height: 175px;
+  width: 100%;
+}
+.slider_block__card__date {
+  font-size: 11px;
+  padding: 16px 0 10px 0;
+  font-weight: 400;
+  color: rgb(0 0 0 / 0.5);
+}
+.slider_block__card__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.slider_block__card__body {
+  text-overflow: ellipsis;
+  padding-top: 20px;
+  font-weight: 300;
+  display: none;
+}
+.slider_block .slick-current .slider_block__card {
+  border-left: 0;
+}
+
+/* Media */
+
+/* Middle */
+@media (min-width: 768px) {
+  .slider_block__title {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .slider_block__card_inside {
+    padding: 0 28px;
+  }
+  .slider_block__card__title {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+
+/* Large */
+@media (min-width: 1024px) {
+  .slider_block__card {
+    height: 510px;
+    width: 25%;
+  }
+  .slider_block__card__body {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    font-size: 15px;
+  }
+}
+
+/* Extra Large */
+@media (min-width: 1280px) {
+  .slider_block__card__body {
+    font-size: 18px;
+  }
+}
+
+/* Extra estra Large */
+
+@media (min-width: 1536px) {
+  .slider_block__card__date {
+    font-size: 14px;
+  }
+}
+
+/* Industri design block styles */
+.industri_design_block__title {
+  color: #ffffff;
+  opacity: 0.3;
+}
+.industri_design_block__card {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.industri_design_block__card__date {
+  color: #ffffff;
+  opacity: 0.3;
+}
+.industri_design_block__card__title {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.industri_design_block__card__body {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tutorial design styles */
+.tutorial_design_block__card {
+  height: 662px;
+}
+.tutorial_design_block__card__img {
+  height: 510px;
+}

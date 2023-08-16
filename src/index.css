@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(/src/Components/SliderBlock/SliderBlock.css);
+@import url(/src/Components/StaticBlock/StaticBlock.css);
+@import url(/src/Components/Header/Header.css);
+@import url(/src/Components/PageTitle/PageTitle.css);
+@import url(/src/Components/TeasersArticles/TeasersArticles.css);
+@import url(/src/Components/LatestArticles/LatestArticles.css);
+@import url(/src/Components/Loader/Loader.css);
+@import url(/src/Components/BottomBlock/BottomBlock.css);
+.hidden_menu {
+  display: none;
+}
+.visuallyhidden {
+  opacity: 0;
+}
+.boxic {
+  transition: all 0.5s linear;
+}

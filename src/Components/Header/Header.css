@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu {
+  padding: 1.75rem 1rem;
+  width: 75%;
+}
+.header__menu_list {
+  display: flex;
+  column-gap: 2.5rem;
+}
+.header__menu_logo {
+  width: 2.5rem;
+}
+.header__menu_logo:hover {
+  cursor: pointer;
+}
+.header__menu_item {
+  display: none;
+}
+.header__menu_text {
+  color: rgb(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+}
+.header__menu_text:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255, 1);
+}
+.header__social_links {
+  padding: 2rem 1rem 0 0;
+}
+.header__social_links__list {
+  display: flex;
+  gap: 1rem;
+}
+.header__social_links_item {
+  display: none;
+}
+.header__social_links_img {
+  width: 1.5rem;
+  opacity: 0.5;
+}
+.header__social_links_img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.header__burger_menu {
+  display: block;
+}
+.header__burder_menu__button {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.header__burger_menu__button_item {
+  width: 100%;
+  height: 0.25rem;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+/* Media */
+
+/* Large */
+@media (min-width: 1024px) {
+  .header__menu_item {
+    display: flex;
+  }
+  .header__social_links_item {
+    display: block;
+  }
+  .header__burder_menu {
+    display: none;
+  }
+}
+
+/* Extra Large */
+@media (min-width: 1280px) {
+}

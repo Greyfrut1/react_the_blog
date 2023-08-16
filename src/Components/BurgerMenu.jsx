@@ -1,38 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
-function BurgerMenu({ onClick }) {
-  const [menuItems, setMenuItems] = useState([]);
+function BurgerMenu({ onClick, socLinks, menu }) {
   const rootAdress = "http://91.107.217.207";
   const [isActive, setIsActive] = useState(false);
-  const [socialLinks, setSocialLinks] = useState([]);
   const handleClick = () => {
     setIsActive(true);
   };
-  useEffect(() => {
-    axios
-      .get(
-        "http://91.107.217.207/jsonapi/block_content/social_links/da13c4ff-fea5-48e6-bedb-7ede57c8f29d?include=field_social_links.field_icon_svg"
-      )
-      .then((response) => {
-        const socialLinksData = response.data.data.field_social_links;
-        setSocialLinks(socialLinksData);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-  useEffect(() => {
-    axios
-      .get("http://91.107.217.207/jsonapi/menu_link_content/menu_link_content")
-      .then((response) => {
-        const menuData = response.data.data;
-        setMenuItems(menuData);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
   return (
     <div className="absolute px-3 left-0 top-0 w-full h-full bg-white">
       <div className="p-5 flex justify-end">
@@ -42,7 +15,7 @@ function BurgerMenu({ onClick }) {
         </button>
       </div>
       <ul className="w-screen -mx-3">
-        {menuItems.map((item, index) => (
+        {menu?.data?.map((item, index) => (
           <li
             className="w-full menu-item pl-6 py-6 border-t ${isActive ? 'active-link' : 'inactive-link}"
             key={index}
@@ -57,7 +30,7 @@ function BurgerMenu({ onClick }) {
             </a>
           </li>
         ))}
-        {socialLinks.map((item, index) => (
+        {socLinks?.data?.field_social_links.map((item, index) => (
           <li
             className="w-full menu-item pl-6 py-6 border-t ${isActive ? 'active-link' : 'inactive-link}"
             key={index}
