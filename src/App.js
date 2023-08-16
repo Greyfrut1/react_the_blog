@@ -57,10 +57,7 @@ function App() {
     setIsStyled(!isStyled);
   };
 
-  // const styles = {
-  //   display: isStyled ? "block" : "none",
-  // };
-  const styles2 = {
+  const styles = {
     display: isStyled ? "none" : "block",
   };
 
@@ -108,14 +105,14 @@ function App() {
 
   return (
     <>
-      <div className="boxic visuallyhidden hidden" /*style={styles}*/>
+      <div className="boxic visuallyhidden hidden">
         <BurgerMenu
           menu={menuItems}
           socLinks={socialLinks}
           onClick={burgerClick}
         />
       </div>
-      <div style={styles2} className="font-poppins bg-[#ECECEC]">
+      <div style={styles} className="font-poppins bg-[#ECECEC]">
         <div className="container max-w-[1280px] 2xl:max-w-1440 mx-auto bg-white">
           <div className="dark bg-[#121212] px-[20px] md:px-10 py-0 md:pt-5 md:pb-[40px]">
             <Header
